@@ -1,0 +1,21 @@
+{
+  "name": "jwt-fullstack",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "~1.4",
+    "angular-messages": "~1.4",
+    "angular-resource": "~1.4",
+    "angular-ui-router": "~0.2.14",
+    "angular": "~1.4",
+    "satellizer": "~0.11",
+    "angular-material": "~0.9.8",
+    "angular-ui-carousel": "^0.1.10"
+  }
+}

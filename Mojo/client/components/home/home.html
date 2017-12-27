@@ -1,0 +1,28 @@
+<body ng-app="homeApp">
+<h2>Carousel</h2>
+<div ng-controller="CarouselDemoCtrl as carouselDemo">
+    <h2>{{carouselDemo.title}}</h2>
+    <div class="box-container" ng-if="albums:length">
+        <ui-carousel slides="{{albums}}" on-init="carouselDemo.onCarouselInit()" slides-to-show="3" slides-to-scroll="3">
+            <!-- For slider render -->
+            <carousel-item>
+                <!-- placed your item content here -->
+                <h2>{{ item.title }}</h2>
+                <img src="{{ item.image }}" alt="Image" />
+                <!-- end -->
+            </carousel-item>
+            <carousel-prev>
+                <!-- placed your previous button here -->
+                <button>Prev</button>
+                <!-- end -->
+            </carousel-prev>
+
+            <carousel-next>
+                <!-- placed your next button here -->
+                <button>next</button>
+                <!-- end -->
+            </carousel-next>
+        </ui-carousel>
+    </div>
+</div>
+</body>

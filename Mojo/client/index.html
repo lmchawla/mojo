@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Home</title>
+    <link href="favicon.png" rel="shortcut icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <link href="styles/styles.css" rel="stylesheet">
+  </head>
+
+  <body layout="column">
+    <md-toolbar ng-controller="NavbarController" class="md-whiteframe-z2">
+      <div class="md-toolbar-tools" layout-margin layout-padding>
+        <a ui-sref="home" md-button>Home</a>
+        <div flex>
+          <a ui-sref="profile" md-button ng-if="isAuthenticated()">Profile</a>
+        </div>
+        <a ui-sref="login" md-button ng-if="!isAuthenticated()">Log In</a>
+        <a ui-sref="signup" md-button ng-if="!isAuthenticated()">Sign up</a>
+        <a ui-sref="logout" md-button ng-if="isAuthenticated()">Logout</a>
+      </div>
+    </md-toolbar>
+    <div ui-view></div>
+
+    <!-- Third-party Libraries -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/satellizer/satellizer.js"></script>
+    <script src="bower_components/angular-ui-carousel/dist/ui-carousel.js"></script>
+
+    <!-- Application Code -->
+    <script src="app.js"></script>
+    <script src="shared/password-match/password-match.js"></script>
+    <script src="shared/navbar/navbar.js"></script>
+    <script src="components/home/home.js"></script>
+    <script src="components/login/login.js"></script>
+    <script src="components/password/password.js"></script>
+    <script src="components/password/forgot/forgot.js"></script>
+    <script src="components/password/reset/reset.js"></script>
+    <script src="components/signup/signup.js"></script>
+    <script src="components/logout/logout.js"></script>
+    <script src="components/profile/profile.js"></script>
+    <link href="bower_components/angular-ui-carousel/dist/ui-carousel.css" rel="stylesheet" type="text/css" />
+  </body>
+
+</html>

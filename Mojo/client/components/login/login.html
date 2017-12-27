@@ -1,0 +1,51 @@
+<md-content layout-margin class="center-form">
+
+  <section class="md-whiteframe-z1" flex>
+
+    <md-toolbar class="mute-toolbar">
+      <div class="md-toolbar-tools">
+        <h3>Log in</h3>
+      </div>
+    </md-toolbar>
+
+    <md-content layout="column" layout-gt-sm="row" layout-padding>
+      <div layout="column" flex>
+        <button class="md-button btn-facebook" ng-click="authenticate('facebook')">
+          <md-icon md-svg-src="images/social-facebook.svg" class=" login-icon"></md-icon> Sign in with Facebook
+        </button>
+        <!--<button class="md-button btn-google-plus" ng-click="authenticate('google')">-->
+          <!--<md-icon md-svg-src="images/social-google.svg" class=" login-icon"></md-icon> Sign in with Google-->
+        <!--</button>-->
+      </div>
+      <div class="signup-seperator" layout="row" layout-gt-sm="column" layout-align="center center">
+        <div class="line" flex></div>
+        <div>OR</div>
+        <div class="line" flex></div>
+      </div>
+      <div flex layout="column" layout-padding layout-margin>
+        <form method="post" ng-submit="login()" name="loginForm" layout="column">
+          <md-input-container class="md-icon-float">
+            <label>Email</label>
+            <md-icon>email</md-icon>
+            <input ng-model="email" name="email" type="email" required autofocus>
+          </md-input-container>
+          <md-input-container class="md-icon-float">
+            <label>Password</label>
+            <md-icon>lock</md-icon>
+            <input ng-model="password" name="password" type="password" required>
+          </md-input-container>
+          <md-button type="submit" ng-disabled="loginForm.$invalid" class="md-primary">Log in</md-button>
+        </form>
+      </div>
+    </md-content>
+
+    <md-divider></md-divider>
+
+    <div layout="column" layout-align="center center">
+      <a ui-sref="password.forgot">Forgot your password?</a>
+      <small>Don't have an account yet? <a ui-sref="signup">Sign up</a></small>
+    </div>
+
+  </section>
+
+</md-content>
